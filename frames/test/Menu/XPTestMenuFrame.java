@@ -706,7 +706,6 @@ public class XPTestMenuFrame extends JFrame implements ActionListener {
 				tests = tests + ",LoginPagev42Test";
 			}
 		}
-
 		/* SMOKE TO RULES */
 		boolean IsRuleTriggerSelected = false;
 		if (chckbxBonusRules.isSelected()) {
