@@ -524,6 +524,17 @@ public class XPTestMenuFrame extends JFrame implements ActionListener {
 		chckbxInbTLog.setSelected(status);
 		chckbxInbEngFile.setSelected(status);
 		chckbxInbBonusFile.setSelected(status);
+		
+		chckbxInbCardAssociation.setSelected(status);
+		chckbxInbCardDisassociation.setSelected(status);
+		chckbxInbCustomer.setSelected(status);
+		chckbxInbKilllist.setSelected(status);
+		chckbxInbMultiemail.setSelected(status);
+		chckbxInbMultiPhone.setSelected(status);
+		chckbxInbProduct.setSelected(status);
+		chckbxInbStoreMaster.setSelected(status);
+		chckbxInbUak.setSelected(status);
+		chckbxInbTerminate.setSelected(status);
 	}
 
 	public void SetAllRuleTriggerChckboxs(boolean status) {
