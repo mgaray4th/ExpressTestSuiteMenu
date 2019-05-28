@@ -66,6 +66,7 @@ public class QuickProcessing {
 
 	/* Setting variables */
 	public void SetVariables() throws Exception {
+		ProjectFoldersCreation();
 		DBUrl = GetDBUrl();
 		DBSetUp();
 		SftpServer = GetSftpServer();
@@ -73,6 +74,19 @@ public class QuickProcessing {
 		SftpSetUp();
 	}
 
+	public void ProjectFoldersCreation() {
+		try {
+			File file2 = new File(automatedFilesPath);
+			if (!file2.exists()) {
+				System.out.println("Creating 'automatedFiles' folder.");
+				file2.mkdir();
+				System.out.println("Folder created.");
+			}
+		} catch (Exception e) {
+			System.err.println("Error. " + e.getMessage());
+		}
+	}
+	
 	/* FILES */
 	public void CardAssocQuickProcess() throws Exception {
 		System.out.println("CARDLOADER ASSOC quick processing.");
