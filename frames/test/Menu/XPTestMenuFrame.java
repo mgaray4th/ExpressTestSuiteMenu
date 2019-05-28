@@ -534,48 +534,82 @@ public class XPTestMenuFrame extends JFrame implements ActionListener {
 
 	public void GenerateQuickFiles() {
 		try {
-			JOptionPane.showMessageDialog(null,
-					"Generating file(s)...\nPlease wait for success window.",
-					"Quick file", JOptionPane.NO_OPTION);
 			QuickProcessing qp = new QuickProcessing();
-			
-			if(rdbtnQaA.isSelected()){qp.env="BPQA01";}
-			if(rdbtnQaB.isSelected()){qp.env="BPQA01B";}
-			if(rdbtnQaC.isSelected()){qp.env="BPQA01C";}
-			if(rdbtnUata.isSelected()){qp.env="BPUAT01";}
-			if(rdbtnUatb.isSelected()){qp.env="BPUAT01B";}
-			if(rdbtnUatc.isSelected()){qp.env="BPUAT01C";}
-			
+
+			if (rdbtnQaA.isSelected()) {
+				qp.env = "BPQA01";
+			}
+			if (rdbtnQaB.isSelected()) {
+				qp.env = "BPQA01B";
+			}
+			if (rdbtnQaC.isSelected()) {
+				qp.env = "BPQA01C";
+			}
+			if (rdbtnUata.isSelected()) {
+				qp.env = "BPUAT01";
+			}
+			if (rdbtnUatb.isSelected()) {
+				qp.env = "BPUAT01B";
+			}
+			if (rdbtnUatc.isSelected()) {
+				qp.env = "BPUAT01C";
+			}
+
 			qp.UpdateCredentials();
 			qp.SetVariables();
-			
-			//INBOUND
-			if(chckbxInbCardAssociation.isSelected()){qp.CardAssocQuickProcess();}			//CARDLOADER ASSOC
-			if(chckbxInbCardDisassociation.isSelected()){qp.CardDisassocQuickProcess();}	//CARDLOADER DISASSOC
-			if(chckbxInbCustomer.isSelected()){qp.CustomerQuickProcess();}			//CUSTOMER
-			if(chckbxInbKilllist.isSelected()){qp.KillListQuickProcess();}			//KILLLIST
-			if(chckbxInbMultiemail.isSelected()){qp.MultiEmailQuickProcess();}		//MULTIEMAIL
-			if(chckbxInbMultiPhone.isSelected()){qp.MultiPhoneQuickProcess();}		//MULTIPHONE
-			if(chckbxInbProduct.isSelected()){qp.ProductQuickProcess();}				//PRODUCT
-			if(chckbxInbStoreMaster.isSelected()){qp.StoreQuickProcess();}					//STORE
-			if(chckbxInbTLog.isSelected()){qp.TlogQuickProcess();}					//TLOG
-			if(chckbxInbUak.isSelected()){qp.UAKQuickProcess();}						//UAK
-					
-					//SOCIAL ACTIVITY
-			if(chckbxInbBonusFile.isSelected()){qp.BonusRewardQuickProcess();}		//BONUSREWARD
-			if(chckbxInbEngFile.isSelected()){qp.EngagementQuickProcess();}		//ENGAGEMENT
-					
-					//ONE TIME FILES
-			if(chckbxInbTerminate.isSelected()){qp.TerminateQuickProcess();}	//TERMINATE LID
-			
-			JOptionPane.showMessageDialog(null,
-					"Generating file(s)...\nPlease wait for success window.",
-					"Quick file", JOptionPane.NO_OPTION);
-			
+
+			// INBOUND
+			if (chckbxInbCardAssociation.isSelected()) {
+				qp.CardAssocQuickProcess();
+			} // CARDLOADER ASSOC
+			if (chckbxInbCardDisassociation.isSelected()) {
+				qp.CardDisassocQuickProcess();
+			} // CARDLOADER DISASSOC
+			if (chckbxInbCustomer.isSelected()) {
+				qp.CustomerQuickProcess();
+			} // CUSTOMER
+			if (chckbxInbKilllist.isSelected()) {
+				qp.KillListQuickProcess();
+			} // KILLLIST
+			if (chckbxInbMultiemail.isSelected()) {
+				qp.MultiEmailQuickProcess();
+			} // MULTIEMAIL
+			if (chckbxInbMultiPhone.isSelected()) {
+				qp.MultiPhoneQuickProcess();
+			} // MULTIPHONE
+			if (chckbxInbProduct.isSelected()) {
+				qp.ProductQuickProcess();
+			} // PRODUCT
+			if (chckbxInbStoreMaster.isSelected()) {
+				qp.StoreQuickProcess();
+			} // STORE
+			if (chckbxInbTLog.isSelected()) {
+				qp.TlogQuickProcess();
+			} // TLOG
+			if (chckbxInbUak.isSelected()) {
+				qp.UAKQuickProcess();
+			} // UAK
+
+			// SOCIAL ACTIVITY
+			if (chckbxInbBonusFile.isSelected()) {
+				qp.BonusRewardQuickProcess();
+			} // BONUSREWARD
+			if (chckbxInbEngFile.isSelected()) {
+				qp.EngagementQuickProcess();
+			} // ENGAGEMENT
+
+			// ONE TIME FILES
+			if (chckbxInbTerminate.isSelected()) {
+				qp.TerminateQuickProcess();
+			} // TERMINATE LID
+
+			JOptionPane.showMessageDialog(JPanelMain,
+					"Files Generation Success!", "Quick file",
+					JOptionPane.NO_OPTION);
 
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Exception. ",
-					JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(JPanelMain, e.getMessage(),
+					"Quick file", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 

@@ -40,16 +40,16 @@ public class QuickProcessing {
 	public String SftpServer = "";
 	public String SftpPath = "";
 	public String SftpPort = "22";
-	public String SftpUser = "mgaray";
-	public String SftpPwd = "Sour1!bpexpress";
+	public String SftpUser = "4thsource";
+	public String SftpPwd = "4thsource";
 
 	/* DB Connection */
-	public String DBUser = "mgaray";
-	public String DBPwd = "Sour1!exp";
+	public String DBUser = "4thsource";
+	public String DBPwd = "4thsource";
 	public String DBUrl = "";
 
 	private final String automatedFilesPath = System.getProperty("user.dir")
-			+ "\\automatedFilesPath\\";
+			+ "\\automatedFiles\\";
 	public final String ConfigFilePath = System.getProperty("user.dir")
 			+ "\\src\\utility\\";
 	public boolean WereDBVarsModified = false;

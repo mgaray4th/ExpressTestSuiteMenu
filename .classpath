@@ -5,5 +5,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="D:/Users/mgaray/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar"/>
 	<classpathentry kind="lib" path="D:/Users/mgaray/.m2/repository/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar"/>
+	<classpathentry kind="lib" path="D:/Users/mgaray/.m2/repository/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
