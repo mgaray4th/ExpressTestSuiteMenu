@@ -620,7 +620,7 @@ public class QuickProcessing {
 			return "Success";
 		} catch (Exception e) {
 			System.out.println("Exception. " + e.getMessage());
-			throw e;
+			return e.getMessage();
 		}
 	}
 
@@ -702,7 +702,7 @@ public class QuickProcessing {
 		} catch (Exception e) {
 			DBDisconnect();
 			System.out.println("Exception. " + e.getMessage());
-			throw e;
+			return e.getMessage();
 		}
 	}
 
@@ -970,7 +970,6 @@ public class QuickProcessing {
 		if (!DBConn.equals("Success")) {
 			System.out
 					.println("DB connection failed, cannot continue with testing");
-			System.exit(1);
 			throw new Exception("DB connection failed, finished execution.");
 		}
 
@@ -1039,7 +1038,6 @@ public class QuickProcessing {
 			if (!SftpConn.equals("Success")) {
 				System.out
 						.println("SFTP connection failed, cannot continue with testing");
-				System.exit(1);
 				throw new Exception(
 						"SFTP connection failed, finished execution.");
 			}
