@@ -701,9 +701,9 @@ public class XPTestMenuFrame extends JFrame implements ActionListener {
 		/* LOGIN PAGE V42 */
 		if (chckbxLoginpage42.isSelected()) {
 			if (tests.length() == 0) {
-				tests = tests + "LoginPage42Test";
+				tests = tests + "LoginPagev42Test";
 			} else {
-				tests = tests + ",LoginPage42Test";
+				tests = tests + ",LoginPagev42Test";
 			}
 		}
 
